@@ -35,7 +35,7 @@ describe("Person", () => {
             const student = new Student(1, "Tom", 21, klass);
             expect(student.name).to.equal("Tom");
             expect(student.age).to.equal(21);
-            expect(student.klass).to.equal(klass);
+            expect(student.class).to.equal(klass);
         });
 
         describe("#introduce", () => {
@@ -69,7 +69,7 @@ describe("Person", () => {
             const teacher = new Teacher(1, "Tom", 21, klass);
             expect(teacher.name).to.equal("Tom");
             expect(teacher.age).to.equal(21);
-            expect(teacher.klass).to.equal(klass);
+            expect(teacher.class).to.equal(klass);
         });
 
         describe("#introduce", () => {
@@ -152,11 +152,11 @@ describe("Class", () => {
 
             const student = new Student(1, "Jerry", 21, otherKlass);
 
-            expect(student.klass).to.equal(otherKlass);
+            expect(student.class).to.equal(otherKlass);
 
             klass.appendMember(student);
 
-            expect(student.klass).to.equal(klass);
+            expect(student.class).to.equal(klass);
         });
     });
 });
